@@ -1,0 +1,14 @@
+VERSION DEFINITIVA PARA GITHUB PAGES
+
+Sube estos archivos todos juntos a la carpeta principal del repositorio:
+- index.html
+- logo-nigran-web.png
+- sam.png
+- emma.png
+- oliver.jpg
+- marcia.jpg
+- pam-paul.jpg
+- ben-brenda.jpeg
+
+IMPORTANTE: NO necesitas una carpeta 'assets'.
+Las rutas del index.html ya apuntan a los archivos de la carpeta principal.
