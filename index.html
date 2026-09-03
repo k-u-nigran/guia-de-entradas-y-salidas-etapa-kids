@@ -3,36 +3,370 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Guía de entradas y salidas para las familias — Kids&Us Nigrán">
-<title>Guíaa de entradas y salidas para las familias  | Kids&Us Nigrán</title>
+<meta name="theme-color" content="#f6f8fb">
+<title>Guía de entradas y salidas · Cursos Kids · Kids&Us Nigrán</title>
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap');
-:root{--turquoise:#36b6bd;--pink:#ee83aa;--coral:#ee4f63;--orange:#f47a20;--green:#a6c77b;--ink:#252525;--paper:#fffdfb}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--ink);background:radial-gradient(circle at 10% 5%,rgba(238,131,170,.16),transparent 28%),radial-gradient(circle at 90% 12%,rgba(54,182,189,.14),transparent 30%),#fff;font-family:"Nunito",system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.65}.page{width:min(1120px,calc(100% - 32px));margin:0 auto;padding:30px 0 60px}header{background:rgba(255,255,255,.96);border-radius:30px;padding:24px 28px 28px;box-shadow:0 14px 40px rgba(45,55,60,.10);text-align:center;border:1px solid rgba(54,182,189,.12)}.logo{display:block;width:min(720px,92%);height:auto;margin:0 auto 22px}h1{margin:0;color:var(--coral);font-size:clamp(2rem,4.5vw,3.45rem);line-height:1.12;font-weight:800}.subtitle{margin:14px auto 0;color:#666;font-size:clamp(1.05rem,2vw,1.25rem);font-weight:700}.characters{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin:28px 0 38px}.character-card{background:#fff;border-radius:24px;overflow:hidden;box-shadow:0 12px 30px rgba(45,55,60,.11);border:1px solid rgba(0,0,0,.05);transition:transform .2s ease}.character-card:hover{transform:translateY(-3px)}.character-image{aspect-ratio:1/1;overflow:hidden;background:#f4f4f4}.character-image img{width:100%;height:100%;display:block;object-fit:cover}.character-name{padding:9px 8px 12px;text-align:center;font-weight:800;color:var(--turquoise);font-size:1rem}.content-card{background:var(--paper);border-radius:24px;padding:28px 30px;margin:18px 0;border-left:7px solid var(--turquoise);box-shadow:0 10px 30px rgba(45,55,60,.08)}.content-card:nth-of-type(2n){border-left-color:var(--pink)}.content-card:nth-of-type(3n){border-left-color:var(--orange)}.content-card:nth-of-type(4n){border-left-color:var(--green)}.content-card h2{margin:0 0 15px;font-size:clamp(1.35rem,2.5vw,1.85rem);line-height:1.2;color:var(--coral)}.content-card p{margin:0 0 13px}.content-card p:last-child{margin-bottom:0}.content-card ul{margin:0;padding-left:1.35rem}.content-card li{margin:0 0 10px;padding-left:4px}.content-card li:last-child{margin-bottom:0}.whatsapp-button{display:inline-block;margin-top:2px;padding:12px 20px;border-radius:999px;background:var(--coral);color:#fff;text-decoration:none;font-weight:800;box-shadow:0 8px 18px rgba(238,79,99,.24)}.whatsapp-button:hover{transform:translateY(-1px)}.final{margin-top:30px;padding:30px;text-align:center;border-radius:28px;background:linear-gradient(135deg,rgba(54,182,189,.12),rgba(238,131,170,.14));box-shadow:0 10px 30px rgba(45,55,60,.08)}.final p{margin:4px 0;font-size:1.15rem;font-weight:700}.heart{color:var(--coral)}@media(max-width:900px){.characters{grid-template-columns:repeat(3,1fr)}}@media(max-width:600px){.page{width:min(100% - 18px,1120px);padding-top:12px}header{border-radius:22px;padding:20px 14px 22px}.logo{width:100%;margin-bottom:15px}.characters{grid-template-columns:repeat(2,1fr);gap:12px;margin-top:18px}.character-card{border-radius:18px}.content-card{padding:21px 18px;border-left-width:5px;border-radius:19px}.final{padding:24px 16px;border-radius:20px}}
+  :root{
+    --pink:#ef7fa7;
+    --pink-soft:#fff0f5;
+    --turquoise:#38b7bb;
+    --turquoise-soft:#eafafa;
+    --coral:#ef5366;
+    --coral-soft:#fff0f2;
+    --yellow:#f5c84c;
+    --yellow-soft:#fff8df;
+    --blue:#65b8e8;
+    --blue-soft:#edf8fe;
+    --ink:#33363d;
+    --muted:#6e737c;
+    --paper:#ffffff;
+    --bg:#f6f8fb;
+    --shadow:0 12px 30px rgba(35,45,60,.08);
+  }
+
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0;
+    background:
+      radial-gradient(circle at 8% 8%, rgba(239,127,167,.12), transparent 22rem),
+      radial-gradient(circle at 92% 18%, rgba(56,183,187,.12), transparent 24rem),
+      var(--bg);
+    color:var(--ink);
+    font-family:Arial, Helvetica, sans-serif;
+    line-height:1.62;
+  }
+
+  .page{
+    width:min(100% - 28px, 980px);
+    margin:20px auto 42px;
+  }
+
+  header{
+    background:var(--paper);
+    border-radius:26px;
+    padding:18px 18px 22px;
+    box-shadow:var(--shadow);
+    text-align:center;
+    overflow:hidden;
+  }
+
+  .logo{
+    display:block;
+    width:min(390px, 72%);
+    max-height:100px;
+    object-fit:contain;
+    margin:0 auto 10px;
+  }
+
+  h1{
+    margin:0;
+    font-weight:700;
+    letter-spacing:-.02em;
+    line-height:1.08;
+    text-wrap:balance;
+  }
+
+  .title-main{
+    display:block;
+    font-size:clamp(1.7rem, 4.6vw, 2.65rem);
+  }
+
+  .title-sub{
+    display:block;
+    margin-top:7px;
+    font-size:clamp(1rem, 2.8vw, 1.48rem);
+    color:#555b64;
+    font-weight:700;
+  }
+
+  .intro{
+    margin:18px 0 0;
+    padding:0 8px;
+    color:#4f545c;
+  }
+
+  .characters{
+    display:grid;
+    grid-template-columns:repeat(3, minmax(0,1fr));
+    gap:18px;
+    margin:22px 0;
+  }
+
+  .character{
+    text-align:center;
+  }
+
+  .character img{
+    width:100%;
+    aspect-ratio:1 / 1;
+    object-fit:cover;
+    display:block;
+    border-radius:50%;
+    box-shadow:0 10px 24px rgba(35,45,60,.10);
+    background:#fff;
+  }
+
+  .character-name{
+    margin-top:9px;
+    font-size:1.02rem;
+    font-weight:700;
+  }
+
+  .card{
+    background:var(--paper);
+    border-radius:22px;
+    padding:22px 22px 24px;
+    margin:18px 0;
+    box-shadow:var(--shadow);
+    border-left:7px solid var(--turquoise);
+  }
+
+  .card.pink{border-left-color:var(--pink)}
+  .card.coral{border-left-color:var(--coral)}
+  .card.yellow{border-left-color:var(--yellow)}
+  .card.blue{border-left-color:var(--blue)}
+
+  h2{
+    margin:0 0 12px;
+    font-size:1.18rem;
+    letter-spacing:.01em;
+  }
+
+  p{margin:9px 0}
+  ul{margin:8px 0 0 1.2rem; padding:0}
+  li{margin:7px 0}
+  strong{font-weight:700}
+
+  .section-note{
+    margin-top:4px;
+    color:#555b64;
+  }
+
+  .communication{
+    background:linear-gradient(135deg, #fff7fa, #f5ffff);
+  }
+
+  .actions{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+    margin-top:14px;
+  }
+
+  .contact-button,
+  .whatsapp-button{
+    display:block;
+    text-decoration:none;
+    text-align:center;
+    font-weight:700;
+    border-radius:15px;
+    padding:13px 15px;
+    transition:transform .15s ease, box-shadow .15s ease;
+  }
+
+  .contact-button{
+    background:#fff0c9;
+    color:#604900;
+    border:2px solid #f0c44c;
+  }
+
+  .whatsapp-button{
+    background:#e5f8f3;
+    color:#0c6f57;
+    border:2px solid #79cfbb;
+  }
+
+  .contact-button:hover,
+  .whatsapp-button:hover{
+    transform:translateY(-1px);
+    box-shadow:0 8px 18px rgba(35,45,60,.10);
+  }
+
+  .schedule{
+    display:grid;
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:14px;
+    margin-top:10px;
+  }
+
+  .schedule-block{
+    background:var(--turquoise-soft);
+    border-radius:18px;
+    padding:17px;
+  }
+
+  .schedule-block.friday{
+    background:var(--pink-soft);
+  }
+
+  .schedule-day{
+    font-weight:800;
+    font-size:1.05rem;
+    margin-bottom:10px;
+  }
+
+  .schedule-icon{
+    margin-right:5px;
+  }
+
+  .time{
+    display:flex;
+    align-items:center;
+    gap:9px;
+    background:rgba(255,255,255,.76);
+    border-radius:12px;
+    padding:8px 10px;
+    margin-top:8px;
+  }
+
+  footer{
+    text-align:center;
+    color:#666c75;
+    font-weight:700;
+    margin:26px 0 0;
+    padding:8px;
+  }
+
+  @media (max-width:700px){
+    .page{width:min(100% - 18px, 980px); margin-top:10px}
+    header{border-radius:20px; padding:15px 13px 19px}
+    .logo{width:82%; max-height:86px}
+    .characters{gap:12px}
+    .character-name{font-size:.92rem}
+    .card{padding:18px 17px 20px; border-left-width:6px}
+    .schedule{grid-template-columns:1fr}
+  }
+
+  @media (max-width:470px){
+    .characters{gap:9px}
+    .character-name{font-size:.82rem}
+    .intro{padding:0 2px}
+    .card{font-size:.97rem}
+  }
 </style>
 </head>
+
 <body>
 <main class="page">
-<header>
-<img class="logo" src="logo-nigran-web.png" alt="Kids&Us Nigrán">
-<h1>Guía de entradas y salidas para las familias </h1>
-<div class="subtitle">Cursos Kids (Sam, Emma, Oliver, Marcia, Pam&amp;Paul)</div>
-</header>
-<section class="characters" aria-label="Personajes">
-<article class="character-card"><div class="character-image"><img src="sam.png" alt="Sam"></div><div class="character-name">Sam</div></article>
-<article class="character-card"><div class="character-image"><img src="emma.png" alt="Emma"></div><div class="character-name">Emma</div></article>
-<article class="character-card"><div class="character-image"><img src="oliver.jpg" alt="Oliver"></div><div class="character-name">Oliver</div></article>
-<article class="character-card"><div class="character-image"><img src="marcia.jpg" alt="Marcia"></div><div class="character-name">Marcia</div></article>
-<article class="character-card"><div class="character-image"><img src="pam-paul.jpg" alt="Pam&Paul"></div><div class="character-name">Pam&amp;Paul</div></article>
-<article class="character-card"><div class="character-image"><img src="ben-brenda.jpeg" alt="Ben & Brenda"></div><div class="character-name">Ben &amp; Brenda</div></article>
-</section>
-<section class="content-card"><h2>Bienvenida</h2><p>Queridas familias,</p><p>Tenéis en vuestras manos la guía del funcionamiento de Kids&amp;Us Nigrán. Aquí encontraréis todo lo importante sobre el día a día en nuestro centro. Leedla atentamente y no dudéis en consultarnos cualquier aspecto necesario.</p></section>
-<section class="content-card"><h2>Entrada del alumnado</h2><ul><li>Acceso por la puerta del jardín.</li><li>Formación de fila en el jardín; el profesorado recogerá a los alumnos y los guíará a clase en fila. Os rogamos no abandonar el jardín hasta que vuestro hijo o hija haya entrado al centro. </li><li>Los niños no pueden quedarse solos en el jardín antes de que los recoja el profesor.</li><li>No está permitido que los padres accedan al centro o al aula durante las clases ya que esto dificulta el desarrollo de la clase con normalidad y entorpece el proceso de adaptación del alumnado.  Durante el inicio de curso, es normal que algunos de los alumnos más pequeños sufran crisis de ansiedad por separación; os pedimos calma y confianza.  Nuestro profesorado están preparado y contamos con un protocolo de acción. Siempre podéis contar con el equipo de dirección del centro para manteneros informados sobre su proceso de adaptación. Un punto clave del protocolo es no alargar el momento de despedida en su llegada al centro. Contad con nuestro apoyo para ayudaros en todo momento. </li><li>Punto de recogida: el jardín, con entrega individual y por nombre por parte del profesorado.</li><li>En caso de llegada o recogida tarde, se accede por la puerta principal.</li><li>La puntualidad en llegada y recogida es esencial.</li></ul></section>
-<section class="content-card"><h2>Días de lluvia fuerte</h2><ul><li>Llegada: entrada por el jardín. Seguir las indicaciones del equipo de dirección (fila bajo el toldo o posibilidad de hacer fila en el pasillo)</li><li>Recogida: los padres pueden esperar bajo el toldo en el jardín. Los profesores entregan a los alumnos en la puerta del jardín, uno a uno y por nombre.</li></ul></section>
-<section class="content-card"><h2>Normas de acceso</h2><ul><li>Ser puntuales en la llegada y recogida. </li><li>Traer el material necesario de clase y una botella de agua.</li></ul></section>
-<section class="content-card"><h2>Salida del alumnado</h2><ul><li>El alumnado saldrá por el acceso indicado (jardín), con entrega individual y por nombre por parte del profesorado.</li><li>Entrega individual de alumnos por nombre, para garantizar seguridad.</li><li>Los alumnos solo podrán salir con madre, padre, tutor legal o persona autorizada por escrito.</li><li>No se permite salir sin acompañante salvo autorización firmada por tutor legal (solicitar hoja hoja de autorización de recogida)</li><li>En caso de llegada o recogida tarde, se accede por la puerta principal.</li><li>La puntualidad en llegada y recogida es esencial.</li></ul></section>
-<section class="content-card"><h2>Horarios y comunicaciones</h2><p>Para asegurarnos de que recibís nuestros avisos y comunicaciones importantes, os pedimos dos cosas:</p><p>1. Guardad en vuestra agenda el número de teléfono del centro.</p><p>2. Uníos a nuestro canal oficial de WhatsApp:</p><p><a class="whatsapp-button" href="https://whatsapp.com/channel/0029Vb5mfXsHFxP1ZADiTB3e" target="_blank" rel="noopener noreferrer">Unirme al canal de WhatsApp de Kids&amp;Us Nigrán</a></p><ul><li>Nuestro horario de atención al público es de lunes jueves de 10:00 a 13:00h y de 16:00 a 19:00h y viernes de 10:00 a 14:00h</li></ul></section>
-<div class="final"><p>¡Estamos muy ilusionados por comenzar el curso 2026-2027!</p><p>¡Bienvenidos y hasta pronto!</p><p>Kids&amp;Us Nigrán <span class="heart">❤</span></p></div>
+  <header>
+    <img class="logo" src="logo-nigran-web.png" alt="Kids&Us Nigrán">
+    <h1>
+      <span class="title-main">GUÍA DE ENTRADAS Y SALIDAS</span>
+      <span class="title-sub">CURSOS KIDS | Sam, Emma, Oliver, Marcia, Pam&amp;Paul, Ben&amp;Brenda, Ben&amp;Brenda</span>
+    </h1>
+  </header>
+
+  <section class="card pink intro">
+    <h2>Queridas familias,</h2>
+    <p>Tenéis en vuestras manos la guía del funcionamiento de Kids&amp;Us Nigrán. Aquí encontraréis todo lo importante sobre el día a día en nuestro centro. Leedla atentamente y no dudéis en consultarnos cualquier aspecto necesario.</p>
+  </section>
+
+  <section class="characters" aria-label="Personajes de los cursos">
+    <div class="character">
+      <img src="Sam.png" alt="Sam">
+      <div class="character-name">Sam</div>
+    </div>
+    <div class="character">
+      <img src="Emma.png" alt="Emma">
+      <div class="character-name">Emma</div>
+    </div>
+    <div class="character">
+      <img src="Oliver.jpg" alt="Oliver">
+      <div class="character-name">Oliver</div>
+    </div>
+    <div class="character">
+      <img src="Marcia.jpg" alt="Marcia">
+      <div class="character-name">Marcia</div>
+    </div>
+    <div class="character">
+      <img src="Pam-Paul.jpg" alt="Pam &amp; Paul">
+      <div class="character-name">Pam&amp;Paul</div>
+    </div>
+    <div class="character">
+      <img src="Ben-Brenda.jpeg" alt="Ben &amp; Brenda">
+      <div class="character-name">Ben &amp; Brenda</div>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>Entrada del alumnado</h2>
+    <ul>
+      <li>Acceso por la puerta del jardín.</li>
+      <li>Formación de fila en el jardín; el profesorado recogerá a los alumnos y los guiará a clase en fila. Os rogamos no abandonar el jardín hasta que vuestro hijo o hija haya entrado al centro.</li>
+      <li>Los niños no pueden quedarse solos en el jardín antes de que los recoja el profesor.</li>
+      <li>No está permitido que los padres accedan al centro o al aula durante las clases ya que esto dificulta el desarrollo de la clase con normalidad y entorpece el proceso de adaptación del alumnado.</li>
+    </ul>
+
+    <p>Durante el inicio de curso, es normal que algunos de los alumnos más pequeños sufran crisis de ansiedad por separación; os pedimos calma y confianza.</p>
+    <p>Nuestro profesorado está preparado y contamos con un protocolo de acción. Siempre podéis contar con el equipo de dirección del centro para manteneros informados sobre su proceso de adaptación. Un punto clave del protocolo es no alargar el momento de despedida en su llegada al centro. Contad con nuestro apoyo para ayudaros en todo momento.</p>
+
+    <ul>
+      <li>Punto de recogida: el jardín, con entrega individual y por nombre por parte del profesorado.</li>
+      <li>En caso de llegada o recogida tarde, se accede por la puerta principal.</li>
+      <li>La puntualidad en llegada y recogida es esencial.</li>
+    </ul>
+  </section>
+
+  <section class="card blue">
+    <h2>Días de lluvia fuerte</h2>
+    <ul>
+      <li><strong>Llegada:</strong> entrada por el jardín. Seguir las indicaciones del equipo de dirección (fila bajo el toldo o posibilidad de hacer fila en el pasillo)</li>
+      <li><strong>Recogida:</strong> los padres pueden esperar bajo el toldo en el jardín. Los profesores entregan a los alumnos en la puerta del jardín, uno a uno y por nombre.</li>
+    </ul>
+  </section>
+
+  <section class="card yellow">
+    <h2>Normas de acceso</h2>
+    <ul>
+      <li>Ser puntuales en la llegada y recogida.</li>
+      <li>Traer el material necesario de clase y una botella de agua.</li>
+    </ul>
+  </section>
+
+  <section class="card coral">
+    <h2>Salida del alumnado</h2>
+    <ul>
+      <li>El alumnado saldrá por el acceso indicado (jardín), con entrega individual y por nombre por parte del profesorado.</li>
+      <li>Entrega individual de alumnos por nombre, para garantizar la seguridad.</li>
+      <li>Los alumnos solo podrán salir con madre, padre, tutor legal o persona autorizada por escrito.</li>
+      <li>No se permite salir sin acompañante salvo autorización firmada por tutor legal (solicitar hoja de autorización de recogida)</li>
+      <li>En caso de llegada o recogida tarde, se accede por la puerta principal.</li>
+      <li>La puntualidad en llegada y recogida es esencial.</li>
+    </ul>
+  </section>
+
+  <section class="card communication pink">
+    <h2>Horarios y comunicaciones</h2>
+    <p>Para asegurarnos de que recibís nuestros avisos y comunicaciones importantes, os solicitamos que por favor realicéis estas dos acciones:</p>
+    <ol>
+      <li><strong><a class="contact-button" href="contacto.vcf">📇&nbsp; Guardad en vuestra agenda el número de teléfono del centro.</a></strong></li>
+      <li><strong>Uníos a nuestro canal oficial de WhatsApp:</strong></li>
+    </ol>
+
+    <div class="actions">
+      <a class="whatsapp-button" href="https://whatsapp.com/channel/0029Vb5mfXsHFxP1ZADiTB3e" target="_blank" rel="noopener">
+        💬&nbsp; Unirme al canal de WhatsApp de Kids&amp;Us Nigrán
+      </a>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>HORARIO DE ATENCIÓN</h2>
+    <div class="schedule">
+      <div class="schedule-block">
+        <div class="schedule-day"><span class="schedule-icon">📅</span>De lunes a jueves</div>
+        <div class="time"><span>☀️</span><strong>10:00 a 13:00h</strong></div>
+        <div class="time"><span>🌙</span><strong>16:00 a 19:00h</strong></div>
+      </div>
+      <div class="schedule-block friday">
+        <div class="schedule-day"><span class="schedule-icon">📅</span>Viernes</div>
+        <div class="time"><span>☀️</span><strong>10:00 a 14:00h</strong></div>
+      </div>
+    </div>
+  </section>
+
+  <footer>Kids&amp;Us Nigrán <span aria-label="corazón">❤</span></footer>
 </main>
 </body>
 </html>
