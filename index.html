@@ -45,10 +45,10 @@
   header{
     background:var(--paper);
     border-radius:26px;
-    padding:18px 18px 22px;
+    padding:18px 18px 24px;
     box-shadow:var(--shadow);
     text-align:center;
-    overflow:hidden;
+    overflow:visible;
   }
 
   .logo{
@@ -74,10 +74,15 @@
 
   .title-sub{
     display:block;
-    margin-top:7px;
+    margin:8px auto 0;
+    max-width:100%;
     font-size:clamp(1rem, 2.8vw, 1.48rem);
+    line-height:1.2;
     color:#555b64;
     font-weight:700;
+    white-space:normal;
+    overflow-wrap:anywhere;
+    word-break:normal;
   }
 
   .intro{
@@ -166,15 +171,17 @@
   }
 
   .contact-button{
-    background:#fff0c9;
-    color:#604900;
-    border:2px solid #f0c44c;
+    background:#ef3f73;
+    color:#ffffff;
+    border:2px solid #ef3f73;
+    box-shadow:0 6px 16px rgba(239,63,115,.22);
   }
 
   .whatsapp-button{
-    background:#e5f8f3;
-    color:#0c6f57;
-    border:2px solid #79cfbb;
+    background:#19b957;
+    color:#ffffff;
+    border:2px solid #19b957;
+    box-shadow:0 6px 16px rgba(25,185,87,.22);
   }
 
   .contact-button:hover,
@@ -231,7 +238,10 @@
   @media (max-width:700px){
     .page{width:min(100% - 18px, 980px); margin-top:10px}
     header{border-radius:20px; padding:15px 13px 19px}
-    .logo{width:82%; max-height:86px}
+    .logo{width:82%; max-height:86px; margin-bottom:11px}
+    h1{padding:0 3px}
+    .title-main{line-height:1.1}
+    .title-sub{margin-top:8px; font-size:clamp(.92rem, 4.2vw, 1.15rem); line-height:1.24}
     .characters{gap:12px}
     .character-name{font-size:.92rem}
     .card{padding:18px 17px 20px; border-left-width:6px}
